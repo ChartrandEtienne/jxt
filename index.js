@@ -66,7 +66,7 @@ JXT.prototype.tagged = function (tag) {
 };
 
 JXT.prototype.build = function (xml) {
-    var JXTClass = this.getDefinition(xml.localName, xml.namespaceURI);
+    var JXTClass = this.getDefinition(xml.localName, xml.namespaceURI || 'jabber:client');
     if (JXTClass) {
         return new JXTClass(null, xml);
     }
